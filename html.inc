@@ -57,6 +57,18 @@
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44052711-1', 'mybiggestfollower-pomart.rhcloud.com');
+  ga('send', 'pageview');
+
+  </script>
   </head>
   <body>
     <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -151,7 +163,7 @@
           }
       
           // Update JSON data file used for graphing
-          $file = "flare1.json"; 
+          $file = $screen_name.".json"; 
           $handle = fopen($file, 'w');
           $json = '{ "name": "analytics","children": [ ';
           
@@ -176,7 +188,7 @@
 
           // Display the bubble graph
           echo "<h3>".$user_response->num_rows." follower bubbles for user <i>".$screen_name."</i> : </h3>";
-          echo '<iframe src="graph1.html" width=100% height=700px scrolling="no" style="height: auto" frameborder="0" scrolling="no" seamless/></iframe>';
+          echo '<iframe src="graph1.php?screen_name='.$screen_name.'" width=100% height=700px scrolling="no" style="height: auto" frameborder="0" scrolling="no" seamless/></iframe>';
           echo '<br><br><p style="text-align: center"><a href="index.php?update=1">Update data</a></p>';   
           echo '<hr>';
 
@@ -186,7 +198,7 @@
       
       
       <div class="footer">
-        <p>2013 &copy; PoMart Inc. Built using PHP/D3 with OAuth for Twitter's REST API v1.1 by Abraham Williams.</p>
+        <p>&copy; PoMart Inc. 2013. Built using PHP/MySQL/D3 with OAuth for Twitter's REST API v1.1 by Abraham Williams.</p>
       </div>
 
     </div> <!-- /container -->
