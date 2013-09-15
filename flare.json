@@ -1,0 +1,23 @@
+{
+ "name": "analytics",
+ "children": [
+  {
+   "name": "1",
+   "children": [
+    {"name": "po_rpi", "size": 1}
+   ]
+  },
+  {
+   "name": "2",
+   "children": [
+    {"name": "takeoutweight", "size": 313}
+    ]
+  },
+  {
+   "name": "3",
+   "children": [
+    {"name": "sergio0641", "size": 748}
+    ]
+  }
+  ]
+}
